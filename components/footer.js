@@ -1,8 +1,16 @@
 const Footer = () => {
   return (
-    <div>
-      Copyright 2021 - Next Anime
-    </div>
+    <>
+      <div>
+        Menu
+      </div>
+      <div>
+        Newsletter
+      </div>
+      <div>
+        Copyright 2021 - Next Anime
+      </div>
+    </>
   );
 };
 
