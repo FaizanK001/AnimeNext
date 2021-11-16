@@ -1,10 +1,11 @@
 import Link from 'next/link'
+import styles from '../styles/404.module.css'
 
 const NoPage = () => {
   return (
-    <div>
-      <h1>This page cannot be found</h1>
-      <h2>Head back to the homepage <Link href='/'>Here</Link></h2>
+    <div className={styles.container}>
+      <h1 className={styles.text}>This page cannot be found</h1>
+      <h2 className={styles.text}>Head back to the homepage <Link href='/'><a className={styles.innerText}>here</a></Link></h2>
     </div>
   );
 }
