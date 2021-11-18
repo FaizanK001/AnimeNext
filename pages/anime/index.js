@@ -2,7 +2,17 @@ import Head from 'next/head'
 import styles from '../../styles/Anime.module.css'
 import Footer from '../../components/footer'
 
-export default function Home() {
+export const getStaticProps = async () => {
+
+  const res = await fetch('https://api.jikan.moe/v3/top/anime');
+  const data = await res.json();
+
+  return {
+    props: { anime: data }
+  }
+}
+
+export default function Anime({ anime }) {
   return (
     <div>
       <Head>
