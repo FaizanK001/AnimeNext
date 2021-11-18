@@ -1,4 +1,10 @@
 .container {
   height: 100vh;
   padding: 0 2rem;
+  overflow: scroll;
+}
+
+.animeCard {
+  margin: 10px;
+  height: 20px;
 }
