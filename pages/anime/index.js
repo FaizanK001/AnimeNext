@@ -33,6 +33,9 @@ export default function Anime({ anime }) {
               <div className={styles.animeTitle}>
                 {res.title.length > 25 ? res.title.substring(0, 25) + '...' : res.title}
               </div>
+              <div>
+                No of Episodes: {res.episodes}
+              </div>
             </div>)}
         </div>
       </main>
