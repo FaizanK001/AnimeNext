@@ -2,6 +2,7 @@
   padding: 2px 16px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .animeCard {
