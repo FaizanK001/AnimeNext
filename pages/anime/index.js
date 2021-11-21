@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../../styles/Anime.module.css'
 import Footer from '../../components/footer'
+import Link from 'next/link'
 
 export const getStaticProps = async () => {
 
@@ -21,14 +22,19 @@ export default function Anime({ anime }) {
         <link rel="icon" href="/NextAnimeLogo.png" />
       </Head>
 
-      <main className={styles.container}>
-        {anime.top.map(res =>
-          <div className={styles.animeCard} key={res.mal_id}>
-            <img src={res.image_url} className={styles.animeImage}></img>
-            <div className={styles.animeTitle}>
-              {res.title.length > 25 ? res.title.substring(0, 25) + '...' : res.title}
-            </div>
-          </div>)}
+      <main>
+        <Link href="/">
+          <button>Back to home!</button>
+        </Link>
+        <div className={styles.container}>
+          {anime.top.map(res =>
+            <div className={styles.animeCard} key={res.mal_id}>
+              <img src={res.image_url} className={styles.animeImage}></img>
+              <div className={styles.animeTitle}>
+                {res.title.length > 25 ? res.title.substring(0, 25) + '...' : res.title}
+              </div>
+            </div>)}
+        </div>
       </main>
       <div>
         {anime.top.map(res => console.log)}
