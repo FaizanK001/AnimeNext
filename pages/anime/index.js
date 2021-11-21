@@ -24,9 +24,15 @@ export default function Anime({ anime }) {
       <main className={styles.container}>
         {anime.top.map(res =>
           <div className={styles.animeCard} key={res.mal_id}>
-            {res.title}
+            <img src={res.image_url}></img>
+            <div className={styles.animeTitle}>
+              {res.title}
+            </div>
           </div>)}
       </main>
+      <div>
+        {anime.top.map(res => console.log)}
+      </div>
       <Footer />
     </div >
   )
