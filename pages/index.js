@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Footer from '../components/footer'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -14,6 +15,9 @@ export default function Home() {
 
       <main className={styles.main}>
         <Image src="/NextAnimeLogo.png" width={128} height={128} />
+        <Link href="/anime">
+          <button>Check out the top 50 Anime!</button>
+        </Link>
       </main>
       <Footer />
 
