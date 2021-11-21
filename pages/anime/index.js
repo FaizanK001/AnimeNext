@@ -24,9 +24,9 @@ export default function Anime({ anime }) {
       <main className={styles.container}>
         {anime.top.map(res =>
           <div className={styles.animeCard} key={res.mal_id}>
-            <img src={res.image_url}></img>
+            <img src={res.image_url} className={styles.animeImage}></img>
             <div className={styles.animeTitle}>
-              {res.title}
+              {res.title.length > 25 ? res.title.substring(0, 25) + '...' : res.title}
             </div>
           </div>)}
       </main>
